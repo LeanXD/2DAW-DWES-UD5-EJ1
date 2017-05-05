@@ -1,0 +1,4 @@
+director=Acciones.AccionDirectores
+genero=Acciones.AccionGenero
+insertar=Acciones.AccionInsertar
+peliculas=Acciones.AccionPeliculas

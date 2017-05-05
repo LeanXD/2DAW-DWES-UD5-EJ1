@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Gestor de Pel&iacute;culas</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="javascript.js"></script>
+</head>
+<body>
+<center>
+<div id="divInicio" style="background-color: #E0ECFF;">
+	<fieldset>Bienvenido al gestor de pel&iacute;culas</fieldset>
+	<br>
+	<button onclick="CargarInsertar()">Insertar Pel&iacute;cula </button>
+	<button onclick="MostrarFotogramas()">Mostrar Pel&iacute;culas</button>
+	<button onclick="CargarBusqueda()">Buscar Pel&iacute;cula</button>
+	<br/>
+	<br/>
+</div>
+<div id="divInsertarPeli" style="display: none; background-color: rgb(100%, 88%, 88%);">
+	<fieldset>Inserte una pel&iacute;cula</fieldset>
+	<br/>
+	<form id="formInsertar" method="post" action="controlador?accion=insertar">
+		<label>T&iacute;tulo de pel&iacute;cula:</label>
+		<input type="text" id="titulo" required>
+		<br/>
+		<br/>
+		<label>Nombre del archivo de pel&iacute;cula:</label>
+		<input type="text" id="archivo" required>
+		<br/>
+		<br/>
+		<label>A&ntilde;o del estreno:</label>
+		<input type="number" id="estreno" required>
+		<br/>
+		<br/>
+		<label>Seleccione un g&eacute;nero:</label>
+		<select name="genero" id="genero">
+		</select>
+		<br/>
+		<br/>
+		<label>Seleccione un director:</label>
+		<select name="director" id="director">
+		</select>
+		<br/>
+		<br/>
+		<br/>
+		<input type="button" value="Insertar" onclick="InsertarPelicula()">
+	</form> 
+	<br/>
+	<button onclick="Volver()">Volver</button>
+	<br/>
+	<br/>
+</div>
+<div id="divFotogramas" style="display: none; background-color: rgb(227, 255, 224);">
+<fieldset>Listado de pel&iacute;culas</fieldset>
+<br/>
+<br/>
+	<div id="divTablaTodas">
+	</div>
+	<br/>
+<br/>
+	<button onclick="Volver()">Volver</button>
+	<br/>
+	<br/>
+</div>
+<div id="divFotogramasDirector" style="display: none; background-color: #E0F8F7";>
+<fieldset>Listado de pel&iacute;culas seg&uacute;n el director</fieldset>
+<br/>
+<br/>
+<label>Seleccina un director</label>
+<select name="selectD" id="selectD"></select>
+<br/>
+<br/>
+<button onclick="ObtenerPeliculas()">Buscar</button>
+<button onclick="Volver()">Volver</button>
+<br/>
+<br/>
+	<div id="divTablaDirector">
+	</div>
+	<br/>
+<br/>
+</div>
+<br/>
+<br/>
+<label id="errores"></label>
+</center>
+</body>
+</html>
