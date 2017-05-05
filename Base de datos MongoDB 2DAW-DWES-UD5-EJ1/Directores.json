@@ -1,0 +1,16 @@
+{ 
+    "_id" : ObjectId("59036b07d5a2131198209dec"), 
+    "nombre" : "Fren", 
+    "apellidos" : "Zinnemann", 
+    "peliculas" : {
+        "ipPelicula" : "59036c0dd5a2131198209dee"
+    }
+}
+{ 
+    "_id" : ObjectId("5907c4ecd5a2130c2cd8cebd"), 
+    "nombre" : "F.Grev", 
+    "apellidos" : "Grev", 
+    "peliculas" : {
+        "ipPelicula" : ""
+    }
+}
